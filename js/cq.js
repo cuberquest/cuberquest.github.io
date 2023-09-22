@@ -1,3 +1,5 @@
+console.log("Alpha Version: v0.01"); // Allows us to track our website timeline
+
 let myGamePiece,
 mySound,
 myMusic;
