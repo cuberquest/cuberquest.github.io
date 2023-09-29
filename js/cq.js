@@ -4,6 +4,11 @@ let myGamePiece,
 mySound,
 myMusic;
 
+const speed = {
+  base: 5,
+  mod: 1
+};
+
 function loadGame() {
   myGamePiece = new comp(100, 100, "", undefined, undefined, "img", true)
   myGameArea.start();
@@ -21,10 +26,10 @@ const myGameArea = {
     this.interval = setInterval(updateGameArea, 1000 / 1000);
   },
   clear: function() {
-    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height)
+    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
   },
   stop: function() {
-    clearInterval(this.interval)
+    clearInterval(this.interval);
   }
 }
 
@@ -68,4 +73,21 @@ class sound {
 function updateGameArea() {
   myGameArea.clear();
   window.myGameArea.frameNo += 1;
+}
+
+function keyPress(key) {
+  switch (key) {
+    case "w":
+      
+      break;
+    case "s":
+      
+      break;
+    case "a":
+      
+      break;
+    case "d":
+      
+      break;
+  }
 }
