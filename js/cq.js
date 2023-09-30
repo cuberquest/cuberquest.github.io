@@ -72,7 +72,7 @@ class sound {
 
 function updateGameArea() {
   myGameArea.clear();
-  window.myGameArea.frameNo += 1;
+  myGamePiece.update();
 }
 
 function keyPress(key) {
