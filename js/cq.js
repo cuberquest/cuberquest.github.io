@@ -1,9 +1,10 @@
 console.log("Alpha Version: v0.01"); // Allows us to track our website timeline
 
-const fmtr = Intl.NumberFormat("en-ca", {notation: "compact"})
-
-let $ = fmtr.format(1000);
-console.log($);
+const format = function(n) {
+  return Intl.NumberFormat("en-ca", {
+    notation: "compact"
+  }).format(n).toLowerCase();
+};
 
 let myGamePiece,
 mySound,
@@ -31,7 +32,7 @@ const myGameArea = {
     this.interval = setInterval(updateGameArea, 1000 / 1000);
   },
   clear: function() {
-    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    //this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
   },
   stop: function() {
     clearInterval(this.interval);
@@ -53,8 +54,8 @@ class comp {
     this.y = y;
     this.speedX = 0;
     this.speedY = 0;
-    this.update = function() {}
-    this.newPos = function() {}
+    this.update = function() {};
+    this.newPos = function() {};
   }
 }
 
