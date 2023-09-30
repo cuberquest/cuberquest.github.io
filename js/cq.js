@@ -16,7 +16,6 @@ const speed = {
 };
 
 function loadGame() {
-  myGamePiece = new comp(100, 100, "", undefined, undefined, "img", true)
   myGameArea.start();
 }
 
