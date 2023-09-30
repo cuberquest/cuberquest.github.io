@@ -1,5 +1,10 @@
 console.log("Alpha Version: v0.01"); // Allows us to track our website timeline
 
+const fmtr = Intl.NumberFormat("en-ca", {notation: "compact"})
+
+let $ = fmtr.format(1000);
+console.log($);
+
 let myGamePiece,
 mySound,
 myMusic;
