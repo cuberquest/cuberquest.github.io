@@ -17,6 +17,7 @@ const speed = {
 
 function loadGame() {
   myGameArea.start();
+  myGamePiece = new comp(100, 100, "black", 0, 0, "block", true)
 }
 
 const myGameArea = {
@@ -53,7 +54,11 @@ class comp {
     this.y = y;
     this.speedX = 0;
     this.speedY = 0;
-    this.update = function() {};
+    this.update = function() {
+      ctx = myGameArea.context;
+      ctx.fillStyle = color;
+      ctx.fillRect(this.x, this.y, this.width, this.height);
+    };
     this.newPos = function() {};
   }
 }
