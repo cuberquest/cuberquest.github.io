@@ -1,10 +1,10 @@
 console.log("Alpha Version: v0.01"); // Allows us to track our website timeline
 
-const format = function(n) {
+function format(n) {
   return Intl.NumberFormat("en-ca", {
     notation: "compact"
   }).format(n).toLowerCase();
-};
+}
 
 let myGamePiece,
 mySound,
