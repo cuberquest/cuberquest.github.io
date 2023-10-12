@@ -1,10 +1,6 @@
 console.log("Alpha Version: v0.01"); // Allows us to track our website timeline
 
-function format(n) {
-  return Intl.NumberFormat("en-ca", {
-    notation: "compact"
-  }).format(n).toLowerCase();
-}
+import format from "./compact.js";
 
 let myGamePiece,
 mySound,
@@ -85,19 +81,23 @@ function updateGameArea() {
   myGamePiece.update();
 }
 
+function everyInterval(n) {
+  return (myGameArea.frameNo / n) % 1 === 0;
+}
+
 function keyPress(key) {
   switch (key) {
     case "w":
-      
+      myGamePiece.speedY = -speed.base * speed.mod;
       break;
     case "s":
-      
+      myGamePiece.speedY = speed.base * speed.mod;
       break;
     case "a":
-      
+      myGamePiece.speedX = -speed.base * speed.mod;
       break;
     case "d":
-      
+      myGamePiece.speedX = speed.base * speed.mod;
       break;
   }
 }
