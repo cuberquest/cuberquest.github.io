@@ -1,6 +1,6 @@
 console.log("Alpha Version: v0.01"); // Allows us to track our website timeline
 
-import format from "./compact.js";
+// import format from "./compact.js";
 
 let myGamePiece,
 mySound,
@@ -18,7 +18,7 @@ function loadGame() {
 
 const myGameArea = {
   canvas: document.createElement("canvas"),
-  start: function() {
+  start() {
     this.canvas.width = innerWidth;
     this.canvas.height = innerHeight;
     this.context = this.canvas.getContext("2d");
@@ -27,10 +27,10 @@ const myGameArea = {
     this.frameNo = 0;
     this.interval = requestAnimationFrame(updateGameArea);
   },
-  clear: function() {
+  clear() {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
   },
-  stop: function() {
+  stop() {
     clearInterval(this.interval);
   }
 }
