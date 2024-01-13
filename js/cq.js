@@ -50,13 +50,13 @@ class comp {
     this.y = y;
     this.speedX = 0;
     this.speedY = 0;
-    this.update = function() {
-      ctx = myGameArea.context;
-      ctx.fillStyle = color;
-      ctx.fillRect(this.x, this.y, this.width, this.height);
-    };
-    this.newPos = function() {};
   }
+  update() {
+    ctx = myGameArea.context;
+    ctx.fillStyle = color;
+    ctx.fillRect(this.x, this.y, this.width, this.height);
+  }
+  newPos() {}
 }
 
 class sound {
@@ -67,12 +67,12 @@ class sound {
     this.sound.setAttribute("controls", "none");
     this.sound.style.display = "none";
     document.body.appendChild(this.sound);
-    this.play = function() {
-      this.sound.play();
-    };
-    this.stop = function() {
-      this.sound.pause();
-    };
+  }
+  play() {
+    this.sound.play();
+  }
+  stop() {
+    this.sound.pause();
   }
 }
 
