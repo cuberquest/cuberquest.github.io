@@ -36,9 +36,11 @@ const myGameArea = {
 }
 
 function updateSize() {
-
+  myGameArea.canvas.width = innerWidth;
+  myGameArea.canvas.height = innerHeight;
   updateGameArea();
 }
+addEventListener("resize", updateSize);
 updateSize();
 
 class comp {
